@@ -31,416 +31,93 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 
 <!--  vvvvv THIS IS WHERE THE CONTENT GOES! vvvvvvv  -->
 
-## Digitale literaturwissenschaftliche<br/>Netzwerkanalyse (dlina)<br/>dramatischer Texte
+## Close/Machine-Reading Two Versions of Andy Weir's _The Martian_
 <hr/>
 <br/>
 <br/>
 <br/>
-<small>[Peer Trilcke](http://www.trilcke.de/) (Potsdam) &nbsp; · &nbsp; [Frank Fischer](https://www.hse.ru/en/org/persons/182492735) (Moskau)</small>
+<small>[Erik Ketzan](http://www.bbk.ac.uk/arts/research/research-students/english-and-humanities/erik-ketzan) (Birkbeck, London) &nbsp; · &nbsp; [Christof Schöch](http://www.christof-schoech.de/en) (Würzburg Univ.)</small>
+<br/>
+<hr/>
 <br/>
 <br/>
-<br/>
-<small>Panel "Aktuelle Herausforderungen der digitalen Dramenanalyse"</small>
-<small>DHd2017 – Jahrestagung des DHd-Verbands, Bern, 16. Februar 2017</small>
-
---
-
-## dlina-Projekt
-
-<br/>
-**Arbeitsgruppe **
-- F. Fischer (Moskau), M. Göbel (Göttingen), D. Kampkaspar (Wolfenbüttel), C. Kittel (Graz), H.-L. Meiners (Göttingen), D. Skorinkin (Moskau), P. Trilcke (Potsdam)
-- Blog: [lina.digital](https://dlina.github.io/)
-- Github: [github.com/dlina](https://github.com/dlina) &amp; [github.com/lehkost/dramavis](https://github.com/lehkost/dramavis)
-
-**Forschung**
-- Automatisierte, philologisch kuratierte Extraktion, Analyse und Interpretation von Netzwerkdaten aus literarischen (derzeit v.&nbsp;a.: dramatischen) Texten
-
---
-
-# Dramen-Netzwerke
-
-<br/>
-![Emilia Galotti (Netzwerkgraph)](img/dlina/slide_02-1_emilia_galotti.png)<!-- .element width="460px;" -->
-![Die Jungfrau von Orleans (Netzwerkgraph)](img/dlina/slide_02-2_die_jungfrau_von_orleans.png)<!-- .element width="460px;" -->
-
-<br/>
-Graphen zu (links) *Emilia Galotti* und zu (rechts) *Die Jungfrau von Orleans*.<br/>Die Figuren "Emilia" und "Johanna" sind orange markiert.
-
---
-
-# Dramen-Netzwerkanalyse
-
-<br/>
-- Netzwerke = Elemente (Knoten) und deren Relationen (Kanten)
-- Dramen-Netzwerke (in unserem Fall) = Figuren (Knoten) und deren Interaktion (Kanten)
-- Interaktion (in unserem Fall) = das Auftreten von zwei Figuren innerhalb eines Dramensegments (in der Regel: innerhalb einer Szene)
-- Korpus: 465 deutschsprachige Dramen
-- Infos zum Korpus (currently under revision): [DLINA Corpus 15.07 (Codename Sydney)](https://dlina.github.io/Introducing-DLINA-Corpus-15-07-Codename-Sydney/)
-- Tool für die Extraktion und Analyse: dramavis (Frank Fischer & Christopher Kittel) https://github.com/lehkost/dramavis
-
---
-
-## Grundlage: Strukturelle Abstraktion
-
-<br/>
-![Datenmodell eines Dramen-Netzwerks](img/dlina/slide_04-1_abstraktion-zwischenformat.png)<!-- .element width="355px;" -->
-![Beispiel einer Dramenszene (strukturell abstrahiert)](img/dlina/slide_04-2_auszug-zwischenformat.png)<!-- .element width="355px;" -->
-
-<br/>
-Links: Datenmodell eines Dramen-Netzwerks (links).<br/>Rechts: Beispiel einer Dramenszene.
-
---
-
-# *Network Modeling Drama*
-
-<br/>
-Die Netzwerkanalyse von Dramen ist (in unserem Fall) …
-- die (theoriegetriebene) Modellierung eines spezifischen strukturellen Features dramatischer Texte;
-- also eine gezielte Abstraktion, d.&nbsp;h. auch eine recht radikale Reduktion.
-
-<br/>
-Die Netzwerkanalyse von Dramen zielt (in unserem Fall) …
-- auf ein exploratives *distant reading* größerer Textmengen;
-- auf die verfremdende Modellierungen eines literaturwissenschaftlich vertrauten Gegenstandes (d.&nbsp;h. Dramen);
-
---
-
-## *Nearly Close:* Zentralitätsmaße
-
-<br/>
-![Emilia Galotti (Graph)](img/dlina/slide_06-1_emilia galotti_edges-markiert.png)<!-- .element width="400px;" -->
-![Emilia Galotti (Degree-Charts der 5 Top-Figuren)](img/dlina/slide_06-2_emilia-degree-table.png)<!-- .element width="400px;" -->
-![Die Jungfrau von Orleans (Graph)](img/dlina/slide_06-3_die_jungfrau_von_orleans_edges-markiert.png)<!-- .element width="400px;" -->
-![Die Jungfrau von Orleans (Degree-Charts der 5 Top-Figuren)](img/dlina/slide_06-4_jungfrau-degree.png)<!-- .element width="400px;" -->
-
-<br/>
-Graphen (links) und Degree-Charts (rechts) der 5 Top-Figuren aus *Emilia Galotti* (oben) und *Die Jungfrau von Orleans* (unten).
-
---
-
-### *From a Distance:* Graphen zu 465 dt.sprachigen Dramen
-
-![Distant-Reading Showcase (verkleinert)](img/dlina/slide_07_showcase.jpg)<!-- .element height="480px;" -->
-
-"Distant-Reading Showcase": Superposter mit den Netzwerkgraphen zu 465 deutschsprachigen Dramen. – DOI: [10.6084/m9.figshare.3101203.v1](https://dx.doi.org/10.6084/m9.figshare.3101203.v1).
-
---
-
-### *From Graphs to Numbers … to Charts:*<br/>Corpus-Timeline-Chart (Average Degree)
-
-![Historische Verteilung der Average Degree-Werte der Dramen des Korpus](img/dlina/slide_08_avgdegree_-_sara_emilia_johanna_plus_korpus_plus_mean.png)<!-- .element width="480px;" -->
-
-Historische Verteilung der Average Degree-Werte der Dramen des Korpus. Markiert: *Miss Sara Sampson*, *Emilia Galotti*, *Die Jungfrau von Orleans* – gelbe Linie: Mittelwert pro Dekade.
-
---
-
-### *From Graphs to Numbers … to Charts:*<br/>Corpus-Timeline-Chart (Average Degree)
-
-![Historische Verteilung der Average Degree-Werte der Dramen des Korpus](img/dlina/slide_09_avgdegree_-_lessing_plus_korpus_plus_mean.png)<!-- .element width="480px;" -->
-
-Historische Verteilung der Average Degree-Werte der Dramen des Korpus. Markiert: 11 Dramen von Lessing – gelbe Linie: Mittelwert pro Dekade.
-
---
-
-### *From Graphs to Numbers … to Charts:*<br/>Corpus-Timeline-Chart (Average Degree)
-
-![Historische Verteilung der Average Degree-Werte der Dramen des Korpus](img/dlina/slide_10_avgdegree_-_lessing_s+d_romantik_plus_korpus_plus_mean.png)<!-- .element width="480px;" -->
-
-Historische Verteilung der Average Degree-Werte der Dramen des Korpus. Markiert: Lessing-Dramen (orange) – Sturm und Drang-Dramen (blau) – Romantik-Dramen (grün).
-
---
-
-### *From Graphs to Numbers … to Charts:* ›Genre‹ Bars (Average Degree, Density)
-
-<br/>
-![Average Degree nach Genres](img/dlina/slide_11-1_avgdegree_-_nach_genre.png)<!-- .element width="400px;" -->
-![Density nach Genres](img/dlina/slide_11-2_density_-_nach_genre.png)<!-- .element width="400px;" -->
-
-<br/>
-Average Degree (links) und Density (rechts) nach Genres.
-
---
-
-### *From (traditional) ›Genres‹ to (Network-)›Types‹:*<br/>Static Types: Small Worlds
-
-<table>
-  <tbody>
-    <tr>
-      <td style="font-size:0.6em;text-align:left;">Goethe, *Götz* (1773) <br><b>Drama des ›großen Individuums‹</b> </td>
-      <td style="font-size:0.6em;text-align:right;">Mühsam, *Judas* (1921) <br><b>Drama der Masse</b></td>
-    </tr>
-    <tr>
-      <td><div style="text-align:left;"><img alt="Götz, spring" src="img/dlina/slide_12-1_goetz.png" height="300"></div></td>
-      <td><div style="text-align:right;"><img alt="Mühsam, spring" src="img/dlina/slide_12-2_judas.png" height="300"></div></td>
-    </tr>
-    <tr>
-      <td style="font-size:0.7em;text-align:left;"><b>Aristokratisches Modell?</b></td>
-      <td style="font-size:0.7em;text-align:right;"><b>Kommunistisches Modell?</b></td>
-    </tr>
-  </tbody>
-</table>
-
-<br/>
-Siehe: https://dlina.github.io/presentations/2016-krakow/
-
---
-
-### *From (traditional) ›Genres‹ to (Network-)›Types‹:*<br/>Static Types: Small Worlds
-
-<table>
-  <tbody>
-    <tr>
-      <td style="font-size:0.6em;text-align:left;">Goethe, *Der Bürgergeneral* (1793) <br><b>niedrigrhythmisches &amp;<br/>niedrigdynamisches Drama</b> </td>
-      <td style="font-size:0.6em;text-align:right;">Schiller, *Die Jungfrau von Orleans* (1801) <br><b>hochrhythmisches &amp;<br/>hochdynamisches Drama</b></td>
-    </tr>
-    <tr>
-      <td><div style="text-align:left;"><img alt="Bürgergeneral, change chart" src="img/dlina/slide_13-1_change-chart_der_buergergeneral_-_mit_mean.png" height="280"></div></td>
-      <td><div style="text-align:right;"><img alt="Jungfrau von Orleans, change chart" src="img/dlina/slide_13-2_change-chart_die_jungfrau_von_orleans_-_mit_mean.png" height="280"></div></td>
-    </tr>
-    <tr>
-      <td style="font-size:0.7em;text-align:left;"><b>Drama der Kontinuität?</b></td>
-      <td style="font-size:0.7em;text-align:right;"><b>Drama der Diskontinuität?</b></td>
-    </tr>
-  </tbody>
-</table>
-
-<br/>
-Siehe: https://dlina.github.io/presentations/2017-bern/
-
---
-
-# Ausblick
-
-- Wie verfeinern wir die Skalierbarkeit und Adressierbarkeit unserer Analysen?
-  - Design und Anreicherung eines (allgemeinen) Korpus
-  - Web-Interfaces / Open Data
-
-- Wie erzeugen wir mittels digitaler Analysen komplexe Modelle dramatischer Texte?
-  - Frage nach der Interoperabilität und Interinterpretabilität  unterschiedlicher digitaler Modellierungen
-
-- Wohin führt das?
-  - disziplinäre Heterogenität der Aussagen: kaum Tradition des datengetriebenen *distant speaking* in der Literaturwissenschaft
-  - Suche nach einer Beschreibungssprache
-  - Rhetorik (oder gar Poetik) der literaturwissenschaftlichen Datennarration?
-
-
-
-
+<small>Session _Machine Reading/Narrative Machines_<br/><br/>ACLA Conference, Utrecht, The Netherlands, 6.-9.7.2017</small>
 
 
 ---
-## Topic Modeling und <br/>dramatische Gattungen
-<hr/>
-<br/>
-<br/>
-<br/>
-<small>[Nanette Rißler-Pipka](http://www.ku.de/slf/romanistik/lehrstuehle-professuren/literaturwissenschaft/romanlitwi2/personen/prof-dr-nanette-rissler-pipka/) (Eichstätt) ·</small>
-<small>[Christof Schöch](http://www.christof-schoech.de/) (Würzburg)</small>
-<br/>
-<br/>
-<br/>
-<small>Panel "Aktuelle Herausforderungen der digitalen Dramenanalyse"</small>
-<small>Jahrestagung des DHd-Verbands, Bern, 16. Februar 2017</small>
-
---
-## Überblick
-
-1. [Topic Modeling](#/1/2)
-2. [Typen von Topics](#/1/4)
-3. [Topics und Untergattungen](#/1/14)
-4. [Fazit](#/1/21)
-
-
---
-# 1. Topic <br/>Modeling
-
---
-### Topic Model
-<a href="img/blei_topic-modeling_result.png"><img src="img/blei_topic-modeling_result.png" height="500"></img></a>
-<br/>
-<small>Dokumente; Topic-Verteilungen; Wort-Verteilungen</small>
-
-
---
-# 2. Typen von Topics
-
---
-### Daten: drei Korpora
-
-* frz. Wikipedia (1,8 Millionen Artikel, Stand Oktober 2016)
-* frz. Romane (1100 Romane, ca. 1850-2010)
-* frz. Dramen (800 Dramen, ca. 1620-1800) 
-
-
---
-### Typen von Topics
-<br/>
-* argumentativ: abstrakte, erkennbare Themen
-* narrativ: Erzählmotive (zeitlich)
-* deskriptiv: Figuren/Objektbeschreibung, Raumbeschreibung
-* diskursiv: Register, Sprache, Rhetorik, Dialog
-
-
---
-### Beispiel: argumentativ
-<a href="img/wordle_tp018.png"><img src="img/wordle_tp018.png" height="500"></img></a>
-<br/>
-Unglück, Schicksal, Fortuna, Himmel, ...
-
---
-### Beispiel: deskriptiv
-<a href="img/wordle_tp065.png"><img src="img/wordle_tp065.png" height="500"></img></a>
-<br/>
-Gesicht, Teint, Auge, weiß, klein, ...
-
---
-### Beispiel: narrativ
-<a href="img/wordle_tp081.png"><img src="img/wordle_tp081.png" height="500"></img></a>
-<br/>
-Essen, Tisch, trinken, auftragen, Mahl, ...
-
---
-### Beispiel: diskursiv
-<a href="img/wordle_tp156.png"><img src="img/wordle_tp156.png" height="500"></img></a>
-<br/>
-Sprache, Sprechen, erscheinen, hören, ... 
-
---
-### Frage
-
-* Unterscheiden sich die drei untersuchten Großgattungen in der Verteilung der vier Typen von Topics?
-
---
-### Vorgehen
-
-* jeweils ein Topic Model für die drei Korpora; vergleichbare Parameter
-* Händische Annotation mit Annotationsrichtlinien
-* Annotator Agreement: ca. 60% (2 Annotatoren, 10 Kategorien); dann Diskussion
-* Ergebnis: Anteile der Types pro Großgattung
-
-
---
-### Ergebnisse
-<a href="img/typen-und-gattungen.png"><img src="img/typen-und-gattungen.png" height="500"></img></a>
-
-
-
---
-# 3. Topics und<br/> Untergattungen
-
-
---
-### Textsammlung
-<br/>
-* 391 französische Theaterstücke, 1630-1789
-* 181 Tragödien, 150 Komödien, 52 Tragikomödien
-* aus der Sammlung "Théâtre classique", ed. Paul Fièvre
-
---
-### Verschiedene Modelle
-<br/>
-* Anzahl der Topics: 50, 60, 70, 80, 90, 100
-* Optimierungsintervall für die Hyperparameter: <br/>50, 100, 300, 500, 1000, 2000, 3000, 6000
-* insgesamt 48 Modelle
-* Auswahl des besten Modells: Klassifikationstask
-
-
---
-### Evaluierung der Modelle (Auswahl)
-<a href="img/classify-performance_topics_subgenre.svg"><img src="img/classify-performance_topics_subgenre.svg" height="500"></img></a>
-<br/>
-<small>Bestes Modell: 60 Topics, Optimierungsintervall 300 <br/>(10-fache Kreuzvalidierung; Classifier: SVM, SGD, KNN, Decision Trees)</small>
-
---
-### PCA mit Topic-Daten (60 Topics)
-<a href="img/2d-scatterplot-topicpca.svg"><img src="img/2d-scatterplot-topicpca.svg" height="500"></img></a>
-<br/>
-<small><font color="darkblue"><font color="darkred">Komödien (rot)</font> - <font color="darkgreen">Tragikomödien (grün)</font> - Tragödien (blau)</font> </small>
-
-
---
-# Fazit
-
---
-### Fazit
-<br/>
-* Großgattungen: unterschiedliche Profile bzgl. Typen von Topics
-* Dramatische Untergattungen: jeweils charakteristische Topics
-
---
-### Referenzen
-<br/>
-<small>
-
-* Christof Schöch, „Topic Modeling Genre: An Exploration of French Classical and Enlightenment Drama“, _Digital Humanities Quarterly_ (im Erscheinen). <https://zenodo.org/record/166356>.
-* Christof Schöch, „What Are Literary Topics, Really?“, _Digital Humanities Lunch_, Institute for Polish Language, Kraków, April 8, 2016. <http://christofs.github.io/literary-topics/#/>.
-
-</small>
-
----
-# Panel-Diskussion
-<hr/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<small>Panel "Aktuelle Herausforderungen der digitalen Dramenanalyse"</small>
-<small>Jahrestagung des DHd-Verbands, Bern, Februar 2017</small>
-<br/>
-
---
-### Leitfragen (1): Gemeinsamkeiten 
-<br/>
-* Drei Methoden: Unterschiede in Fragestellung und Herausforderung
-* Gemeinsame Forschungsziele? Input durch jede Methode?
-* Beispiele: empirisch gesicherte Gattungsdifferenzierung oder literaturgeschichtliche Periodisierung 
-* Vernetzung der Ergebnisse?
-* Rückbindung von Ergebnissen an literaturwissenschaftlichen Diskurs?
-* Aber: Verhalten sich Dramen anders als andere Textsorten?
-
---
-### Leitfragen (2): Standards
-<br/>
-* Angleichung: Datenformate, Metadaten – Unterschiede je Methode
-* Welche konzeptuellen und datenbezogenen Standards für dokumentbezogene Metadaten und strukturelle oder semantische, lokale Annotationen liegen vor?
-* Wie kann die Standardisierung (bspw. durch Annotationsrichtlinien) weiter gefördert werden?
-
---
-### Leitfragen (3): Ressourcen
-<br/>
-* Welche Ressourcen liegen vor, welche werden gebraucht?
-* Verbesserung der Verfügbarkeit?
-* Welche Tools gibt es?
-* Entwicklung neuer Tools fördern?
-* Einsatzbereich vorhandener Tools erweitern?
-* Chancen für ein multilingual-europäisches Korpus? (Studium der Einflussgeschichte etc.)
-* Welche Ressourcen sind in Planung/Vorbereitung?
-
+# Overview
+1. [Introduction](#/1/2)
 
 
 ---
-# Publikums-Diskussion
-<hr/>
-<br/>
-<br/>The floor is yours!
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<small>Panel "Aktuelle Herausforderungen der digitalen Dramenanalyse"</small>
-<small>Jahrestagung des DHd-Verbands, Bern, Februar 2017</small>
-<br/>
+# 1. Introduction
+
+
+--
+## Andy Weir, _The Martian_, 2011/2014
+<img src="img/martian1.jpg" height="300px"/>
+
+
+--
+## Aims
+
+
+--
+## Related Work
+
+
+--
+## Data
+
+
+---
+# 2. Methods and Results
+
+
+--
+## Basic collation
+
+
+--
+## Automatic classification of edits
+
+
+--
+## Cumulative Effect of the Script-Identifiable Copyedits
+
+
+--
+## Detecting transpositions with CollateX
+
+
+--
+## Close Reading of Other Edits
+
+
+--
+## Edits Over the Course of the Novel
+
+
+---
+# Conclusion
+
+
+--
+## Findings
+
+
+--
+## Further Research
+
+
+--
+## References
 
 
 ---
 <br/>
 <br/>
-## Vielen Dank! 
+## Thank you! 
 <br/>
 <br/>
 <br/>
@@ -448,9 +125,7 @@ Sprache, Sprechen, erscheinen, hören, ...
 <br/>
 <br/>
 <br/>
-<small>Christof Schöch, 2017</small>
-<br/>
-<small><http://www.christof-schoech.de></small>
+<small>Erik Ketzan and Christof Schöch, 2017</small>
 <br/>
 <small><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a></small>
 <br/>

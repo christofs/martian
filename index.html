@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Digitale Dramenanalyse</title>
+<title>Close/Machine-Reading</title>
 <meta name="author" content="Christof Schöch">
 <meta name="description" content="Slides">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -57,21 +57,35 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 
 
 --
-## Andy Weir, _The Martian_, 2011/2014
-<img src="img/martian1.jpg" height="300px"/>
+## 
+<img src="img/martian1.jpg" height="400px"/>
+* self-published online in 2011 (=Martian1)
+* published with Crown Publishing in 2014 (=Martian2)
 
 
 --
 ## Aims
-
+<br/>
+* to identify what changed between the two variants of The Martian
+* hypothesis: novel becomes more "mainstream", i.e. socialised, domesticated, appealing to a general audience.
+* to propose a methodology for comparing self-published and later-edited novels
+* to bring a critical perspective to the strengths and weaknesses of a variety of qualitative and technical methods
 
 --
 ## Related Work
-
+<br/>
+* digital genetic criticism: e.g. van Hulle 2008
+* studies exploring variants of contemporary fiction:
+    * Yufang Ho 2011 on John Fowles’s novel The Magus
+    * Martin Paul Eve 2016 on David Mitchell’s Cloud Atlas
 
 --
 ## Data
-
+<br/>
+* two plain text files of the variants of The Martian.
+* Martian1: PDF from Andy Weir’s website
+* Martian2: scanned and OCR'ed print copy
+    
 
 ---
 # Methods and Results
@@ -80,6 +94,9 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 --
 ## Basic collation
 
+--
+### Words added, removed or changed
+<img src="img/basic-collation.png" height="500px"/>
 
 --
 ## Automatic classification of edits
@@ -106,20 +123,59 @@ script-identifiable (blue) vs. other edits (red)
 ## Detecting transpositions with CollateX
 
 --
-### An example from chapter 14
+### What are transpositions?
+<br/>
+* Transpositions: text that has been moved rather than deleted or inserted
+* Detecting transpositions: CollateX (see Dekker and Middell 2011)
+* Practical details: see http://dragonfly.hypotheses.org/954
+
+--
+### CollateX output: variant graph
+<a href="img/chapter2_example.png"><img src="img/chapter2_example.png" height="500px"/></a>
+
+--
+### Simple transposition in chapter 4
+<a href="img/chapter4_transposition.png"><img src="img/chapter4_transposition.png" height="500px"/></a>
+
+--
+### Complex transposition in chapter 14
 <a href="img/transposition_chapter14-2.png"><img src="img/transposition_chapter14-2.png" height="500px"/></a>
+
+--
+### Overview of transpositions
+<br/>
+
+| type                    | count |    % |
+|-------------------------|------:|-----:|
+| punctuation             |    28 |  22% |
+| single words            |    43 |  34% |
+| multi-word expressions  |    55 |  44% |
+| **total**               |   126 | 100% |
 
 
 --
 ## Close Reading of Other Edits
 
+--
+### Reduction of profanity
+<br/>
+* Words like “fuck” and “shit” are substantially reduced (by about 33% and 15%, respectively),
+* numerous other words and phrases are softened with “lesser” profanity or simple non-profanity 
+* Similarly, crude and sophomoric humor is cut in key instances.
+
+--
+### Watney's emotions
+<br/>
+* Martian1: relatively little text is devoted to Watney’s emotions or inner world
+* Martian2: Watney expresses significantly more emotion: he misses his family and friends more and expresses despair, loneliness, and introspection more.
 
 --
 ## Edits Over the Course of the Novel
 
+
 --
-### Levenshtein distance over textual progression
-<img src="img/progression.png" height="500px"/>
+### [Levenshtein distance](#/5/1) over textual progression
+<a href="img/progression.png"><img src="img/progression.png" height="500px"/></a>
 
 
 ---
@@ -127,15 +183,57 @@ script-identifiable (blue) vs. other edits (red)
 
 
 --
-## Findings
+### Findings
+<br/>
 
 
 --
-## Further Research
+### Typology of edits
 
 
 --
-## References
+### Further Research
+
+
+--
+### References
+
+<small>
+
+* Dekker, R. and Middell, G. (2011). Computer-Supported Collation with CollateX: Managing Textual Variance in an Environment with Varying Requirements. Supporting Digital Humanities 2011. University of Copenhagen, Denmark. 17-18 November 2011.
+* Eve, M. P. (2016). “You have to keep track of your changes”: The Version Variants and Publishing History of David Mitchell's Cloud Atlas, Open Library of Humanities. https://olh.openlibhums.org/article/10.16995/olh.82/ 
+* Greetham, D. (1992). Textual scholarship: An introduction. New York/London: Garland Publishing.
+* Ho, Y. (2011). Corpus Stylistics in Principles and Practice: A Stylistic Exploration of John Fowles’ The Magus. New York: Continuum.  
+* Hunt, J. W. & Mcilroy, M. D. (1975). An algorithm for differential file comparison. Computer Science. 
+Modern Language Association (2011). Reports from the MLA Committee on Scholarly Editions, Guidelines for Editors of Scholarly Editions, available at: https://www.mla.org/Resources/Research/Surveys-Reports-and-Other-Documents/Publishing-and-Scholarship/Reports-from-the-MLA-Committee-on-Scholarly-Editions/Guidelines-for-Editors-of-Scholarly-Editions 
+* Navarro, G. (2001). A guided tour to approximate string matching. ACM Computing Surveys. 33 (1): 31–88. doi:10.1145/375360.375365.
+* Schöch, C. (2016). Detecting Transpositions when Comparing Text Versions using CollateX. The Dragonfly’s Gaze. http://dragonfly.hypotheses.org/954
+* TEI-L (2016). Types of Edits. TEI-List. http://tei-l.970651.n3.nabble.com/Types-of-edits-tp4028495.html
+* van Hulle, D. (2008). Manuscript Genetics, Joyce’s Know-How, Beckett’s Nohow. Gainesville: University Press of Florida.
+* Weir, A. (2011). The Martian. Self-published. 
+* Weir, A. (2014). The Martian. New York: Crown Publishing Group. 
+
+</small>
+
+
+---
+# Extra slides
+
+--
+### Levenshtein distance?
+<br/>
+
+|1|2|3|4|5|6|7|8|9|10|
+|-|-|-|-|-|-|-|-|-|-|
+|-|-|M|A|R|T|I|A|N|S|
+|S|A|M|A|R|I|T|A|N|-|
+
+<br/>
+* 2 insertions
+* 2 substitions
+* 1 deletion
+* = Levenshtein distance of 5
+
 
 
 ---

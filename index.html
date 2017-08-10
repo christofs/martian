@@ -31,7 +31,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 
 <!--  vvvvv THIS IS WHERE THE CONTENT GOES! vvvvvvv  -->
 
-## Close/Machine-Reading Two Versions of Andy Weir's _The Martian_
+## Toward a Methodology for Detecting and Classifying Edits in Variants of Fiction. Test Case: Andy Weir's *The Martian*
 <hr/>
 <br/>
 <br/>
@@ -41,7 +41,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 <hr/>
 <br/>
 <br/>
-<small>Session _Machine Reading/Narrative Machines_<br/><br/>ACLA Conference, Utrecht, The Netherlands, 6.-9.7.2017<br/><br/>https://christofs.github.io/martian/</small>
+<small>Digital Humanities Conference 2017, Montréal, 8.-12. August 2017<br/><br/>slides: https://christofs.github.io/martian/</small>
 
 
 ---
@@ -57,54 +57,49 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 
 
 --
-## 
+<img src="img/the-martian.jpg" height="400px"/>
 <img src="img/martian1.jpg" height="400px"/>
-* self-published online in 2011 (=Martian1)
-* published with Crown Publishing in 2014 (=Martian2)
+<img src="img/seul-sur-mars.jpg" height="400px"/>
+
+* 2011: self-published online (=Martian1)
+* 2014: published with Crown Publishing (=Martian2)
+* 2015: Hollywood film
+
 
 
 --
 ## Aims
 <br/>
-* to identify what changed between the two variants of The Martian
-* to propose a methodology for comparing self-published and later-edited novels
-* to bring a critical perspective to the strengths and weaknesses of a variety of qualitative and technical methods
+* to identify what changed between the two variants of _The Martian_
+* to propose a methodology for detecting and classifying edits in variants of fiction
+
 
 --
 ## Hypothesis
 <br/>
 * The Martian is unusual in being a bestselling work of science fiction
-* Martian2 becomes more "mainstream", i.e. socialised, domesticated, appealing to a general audience. 
+* Martian2 becomes more "mainstream", i.e. socialised, domesticated, appealing to a general audience.
 * How does the edit align the text with stylistic features commonly found in bestsellers?
-* See Archer and Jockers on aspects overrepresented in bestsellers: 
-	* scenes of human interaction and relationships
-	* low amount of offensive content
-	* highs and lows of sentiment 
- 
+* See Archer and Jockers on aspects overrepresented in bestsellers:
+    * scenes of human interaction and relationships
+    * low amount of offensive content
+    * highs and lows of sentiment
 
---
-## Related Work
-<br/>
-* digital genetic criticism: e.g. van Hulle 2008
-* studies exploring variants of contemporary fiction:
-    * Yufang Ho 2011 on John Fowles’s novel The Magus
-    * Martin Paul Eve 2016 on David Mitchell’s Cloud Atlas
-    * Peter Stockwell 2000 on *The Poetics of Science Fiction*
-
---
-## Data
-<br/>
-* two plain text files of the variants of The Martian.
-* Martian1: PDF from Andy Weir’s website
-* Martian2: scanned and OCR'ed print copy
-    
 
 ---
 # Methods and Results
 
+--
+## _Martian_ 1 and 2
+<br/>
+Andy Weir: "The editing process was pretty smooth.<br/>It was not a lot of changes at all" (2015)
+<br/>
+<br/>
+<img src="img/wdiff.png" height="400px"/>
 
 --
 ## Basic collation
+
 
 --
 ### Words added, removed or changed
@@ -141,43 +136,30 @@ script-identifiable (blue) vs. other edits (red)
 --
 ### Reduction of profanity
 <br/>
-* Words like “fuck” and “shit” are substantially reduced (by about 33% and 15%, respectively),
-* numerous other words and phrases are softened with “lesser” profanity or simple non-profanity 
-* Similarly, crude and sophomoric humor is cut in key instances.
-* This aligns with Archer/Jockers
+* Crude and sophomoric humor is cut in key instances  <!-- .element: class="fragment" data-fragment-index="1" -->
+* Words like “fuck” and “shit” are substantially reduced (33%, 15%) <!-- .element: class="fragment" data-fragment-index="2" -->
+* Or, profanity is softened: <!-- .element: class="fragment" data-fragment-index="3" -->
+    * fuck it > screw it
+    * fuckload > lot
+    * fucker > bastard
+    * a trailer for all the shit I have to bring > my cargo trailer
 
 --
 ### Watney's emotions
 <br/>
-* Martian1: relatively little text is devoted to Watney’s emotions or inner world
-* Martian2: Watney expresses significantly more emotion: he misses his family and friends more and expresses despair, loneliness, and introspection more.
-* Again, this aligns with Archer/Jockers
+* Martian1:
+    * relatively little about Watney’s emotions or inner world
+* Martian2:
+    * Watney expresses significantly more emotion:
+    * misses his family and friends more
+    * expresses despair, loneliness, and introspection more.
+* (This aligns with Archer/Jockers)
 
 --
 ## Detecting transpositions with CollateX
 
 --
-### What are transpositions?
-<br/>
-* Transpositions: text that has been moved rather than deleted or inserted
-* Professional editing: is it based on words, sentences, larger units?
-* Detecting transpositions: CollateX (see Dekker and Middell 2011)
-* Practical details: see http://dragonfly.hypotheses.org/954
-
---
-### CollateX output: variant graph
-<a href="img/chapter2_example.png"><img src="img/chapter2_example.png" height="500px"/></a>
-
---
-### Simple transposition in chapter 4
-<a href="img/chapter4_transposition.png"><img src="img/chapter4_transposition.png" height="500px"/></a>
-
---
-### Complex transposition in chapter 14
-<a href="img/transposition_chapter14-2.png"><img src="img/transposition_chapter14-2.png" height="500px"/></a>
-
---
-### Overview of transpositions
+### Results
 <br/>
 
 | type                    | count |    % |
@@ -185,8 +167,10 @@ script-identifiable (blue) vs. other edits (red)
 | punctuation             |    28 |  22% |
 | single words            |    43 |  34% |
 | multi-word expressions  |    55 |  44% |
+| entire sentences        |     0 |   0% |
 | **total**               |   126 | 100% |
 
+<br/>(Using CollateX; see Dekker and Middell 2011 and http://dragonfly.hypotheses.org/954)
 
 --
 ## Edits Over the Course of the Novel
@@ -202,44 +186,43 @@ script-identifiable (blue) vs. other edits (red)
 
 
 --
-### Findings
+### The Martian
 <br/>
-* the edits to The Martian align it more with stylistic features overrepresented in bestsellers
-* in the case of The Martian, the editor was polishing rather than rewriting the novel 
+* edits align _The Martian_ more with features overrepresented in bestsellers
+* many small, few larger edits (e.g. no transpositions)
+* edits were applied consistently throughout
+* the editor was polishing rather than rewriting the novel
+* further research: POS, syntax, sentiments, legal issues
 
 --
-### Typology of edits
+### Method
 <br/>
-* see distinction between the “accidentals” and “substantives” used by the Greg-Bowers tradition
-* Our typology: focused on types which can be identified automatically, based on surface features
+* enabled us to identify thousands of edits
+* pre-classify them automatically (typology)
+* close-read the "other" edits
+
 
 --
-### Further Research
-<br/>
-* relative frequency and function of parts of speech
-* quantifying the amount of syntactic change
-* legal issues regarding the texts
-* perform Sentiment Analysis (Archer/Jockers thesis)
-
---
-### References
-
+### Thank you!
+slides: https://christofs.github.io/martian/
 <small>
 
+**References**
+
 * Archer, J. and Jockers, M. (2016). The Bestseller Code. New York: Saint Martin's Press.
-* Dekker, R. and Middell, G. (2011). Computer-Supported Collation with CollateX: Managing Textual Variance in an Environment with Varying Requirements. Supporting Digital Humanities 2011. University of Copenhagen, Denmark. 17-18 November 2011.
-* Eve, M. P. (2016). “You have to keep track of your changes”: The Version Variants and Publishing History of David Mitchell's Cloud Atlas, Open Library of Humanities. https://olh.openlibhums.org/article/10.16995/olh.82/ 
+* Dekker, R. and Middell, G. (2011). "Computer-Supported Collation with CollateX". SDH 2011. University of Copenhagen, Denmark. 17-18 November 2011.
+* Eve, M. P. (2016). "'You have to keep track of your changes': The Version Variants and Publishing History of David Mitchell's Cloud Atlas", OLH. https://olh.openlibhums.org/article/10.16995/olh.82/
 * Greetham, D. (1992). Textual scholarship: An introduction. New York/London: Garland Publishing.
-* Ho, Y. (2011). Corpus Stylistics in Principles and Practice: A Stylistic Exploration of John Fowles’ The Magus. New York: Continuum.  
-* Hunt, J. W. & Mcilroy, M. D. (1975). An algorithm for differential file comparison. Computer Science. 
-Modern Language Association (2011). Reports from the MLA Committee on Scholarly Editions, Guidelines for Editors of Scholarly Editions, available at: https://www.mla.org/Resources/Research/Surveys-Reports-and-Other-Documents/Publishing-and-Scholarship/Reports-from-the-MLA-Committee-on-Scholarly-Editions/Guidelines-for-Editors-of-Scholarly-Editions 
-* Navarro, G. (2001). A guided tour to approximate string matching. ACM Computing Surveys. 33 (1): 31–88. doi:10.1145/375360.375365.
-* Schöch, C. (2016). Detecting Transpositions when Comparing Text Versions using CollateX. The Dragonfly’s Gaze. http://dragonfly.hypotheses.org/954
+* Ho, Y. (2011). "Corpus Stylistics in Principles and Practice: A Stylistic Exploration of John Fowles’ The Magus. New York: Continuum.
+* Hunt, J. W. & Mcilroy, M. D. (1975). An algorithm for differential file comparison. Computer Science.
+MLA (2011). Reports from the MLA Committee on Scholarly Editions, Guidelines for Editors of Scholarly Editions.
+* Navarro, G. (2001). "A guided tour to approximate string matching". ACM Computing Surveys. 33 (1): 31–88. doi:10.1145/375360.375365.
+* Schöch, C. (2016). "Detecting Transpositions when Comparing Text Versions using CollateX". The Dragonfly’s Gaze. http://dragonfly.hypotheses.org/954
 * Stockwell, P. (2000). The Poetics of Science Fiction. New York and Oxon: Routledge.
 * TEI-L (2016). Types of Edits. TEI-List. http://tei-l.970651.n3.nabble.com/Types-of-edits-tp4028495.html
-* van Hulle, D. (2008). Manuscript Genetics, Joyce’s Know-How, Beckett’s Nohow. Gainesville: University Press of Florida.
-* Weir, A. (2011). The Martian. Self-published. 
-* Weir, A. (2014). The Martian. New York: Crown Publishing Group. 
+* van Hulle, D. (2008). _Manuscript Genetics, Joyce’s Know-How, Beckett’s Nohow_. Gainesville: University Press of Florida.
+* Weir, A. (2011). _The Martian_. Self-published.
+* Weir, A. (2014). _The Martian_. New York: Crown Publishing Group.
 
 </small>
 
@@ -247,7 +230,6 @@ Modern Language Association (2011). Reports from the MLA Committee on Scholarly 
 --
 <br/>
 <br/>
-## Thank you! 
 <br/>
 <br/>
 <br/>

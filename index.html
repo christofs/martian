@@ -73,15 +73,16 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 <br/>
 * to identify what changed between the two variants of _The Martian_
 * to propose a methodology for detecting and classifying edits in variants of fiction
+<br/>
+<br/>(see [earlier work](#/4/3))
 
 
 --
-## Hypothesis
+## Hypotheses
 <br/>
-* The Martian is unusual in being a bestselling work of science fiction
-* Martian2 becomes more "mainstream", i.e. socialised, domesticated, appealing to a general audience.
-* How does the edit align the text with stylistic features commonly found in bestsellers?
-* See Archer and Jockers on aspects overrepresented in bestsellers:
+* The Martian is unusual in being a bestselling work of science fiction <!-- .element: class="fragment" data-fragment-index="1" -->
+* Martian2 becomes more "mainstream", i.e. socialised, domesticated, appealing to a general audience. <!-- .element: class="fragment" data-fragment-index="2" -->
+* The edit aligns the text with stylistic features commonly found in bestsellers (Archer and Jockers): <!-- .element: class="fragment" data-fragment-index="3" -->
     * scenes of human interaction and relationships
     * low amount of offensive content
     * highs and lows of sentiment
@@ -140,10 +141,10 @@ script-identifiable (blue) vs. other edits (red)
 * Crude and sophomoric humor is cut in key instances <!-- .element: class="fragment" data-fragment-index="1" -->
 * Words like “fuck” and “shit” are substantially reduced (33%, 15%) <!-- .element: class="fragment" data-fragment-index="2" -->
 * Or, profanity is softened: <!-- .element: class="fragment" data-fragment-index="3" -->
-    * fuck it > screw it
-    * fuckload > lot
-    * fucker > bastard
-    * a trailer for all the shit I have to bring > my cargo trailer
+    * "fuck it" > "screw it" <!-- .element: class="fragment" data-fragment-index="4" -->
+    * "a fuckload of" > "a lot of" <!-- .element: class="fragment" data-fragment-index="5" -->
+    * "fucker" > "bastard" <!-- .element: class="fragment" data-fragment-index="6" -->
+    * "a trailer for all the shit I have to bring" > "my cargo trailer" <!-- .element: class="fragment" data-fragment-index="7" -->
 
 --
 ### Watney's emotions
@@ -171,7 +172,7 @@ script-identifiable (blue) vs. other edits (red)
 | entire sentences        |     0 |   0% |
 | **total**               |   126 | 100% |
 
-<br/>(Using CollateX; see Dekker and Middell 2011 and http://dragonfly.hypotheses.org/954)
+<br/>(Using CollateX; see Dekker and Middell 2011 and http://dragonfly.hypotheses.org/954; [example](#/5/2))
 
 --
 ## Edits Over the Course of the Novel
@@ -185,23 +186,25 @@ script-identifiable (blue) vs. other edits (red)
 ---
 # Conclusion
 
+--
+### Method
+<br/>
+* identify edits (wdiff) <!-- .element: class="fragment" data-fragment-index="1" -->
+* classify them (typology; Python) <!-- .element: class="fragment" data-fragment-index="2" -->
+* close-read and describe the "other" edits <!-- .element: class="fragment" data-fragment-index="3" -->
+* check for transpositions (Collatex) <!-- .element: class="fragment" data-fragment-index="4" -->
+* patterns in textual progression (Python) <!-- .element: class="fragment" data-fragment-index="5" -->
+* next steps: further automate the process <!-- .element: class="fragment" data-fragment-index="6" -->
+
 
 --
 ### The Martian
 <br/>
-* edits align _The Martian_ more with features overrepresented in bestsellers
-* many small, few larger edits (e.g. no transpositions)
-* edits were applied consistently throughout
-* the editor was polishing rather than rewriting the novel
-* further research: POS, syntax, sentiments, legal issues
-
---
-### Method
-<br/>
-* enabled us to identify thousands of edits
-* pre-classify them automatically (typology)
-* close-read the "other" edits
-* look at local phenomena and larger patterns
+* edits align The Martian more with features <br/>overrepresented in bestsellers <!-- .element: class="fragment" data-fragment-index="1" -->
+* many small, few larger edits (e.g. no transpositions) <!-- .element: class="fragment" data-fragment-index="2" -->
+* edits were applied quite consistently throughout <!-- .element: class="fragment" data-fragment-index="3" -->
+* the editor was polishing rather than rewriting the novel <!-- .element: class="fragment" data-fragment-index="4" -->
+* next steps: POS, syntax, sentiments, legal issues <!-- .element: class="fragment" data-fragment-index="5" -->
 
 
 --
@@ -263,6 +266,11 @@ MLA (2011). Reports from the MLA Committee on Scholarly Editions, Guidelines for
 * 1 deletion
 * = Levenshtein distance of 5
 
+
+--
+### Transposition (example)
+<br/>
+<a href="img/transposition_chapter14-2_v2.png"><img src="img/transposition_chapter14-2_v2.png" height="500px"/></a>
 
 
 
